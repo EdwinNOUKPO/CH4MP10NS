@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: benin-health-dashboard
+    env: node
+    plan: free
+    rootDir: ./Urbanist-main-plan
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
